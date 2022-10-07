@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Foundation-CSS/Foundation-Sites-CSS/css/foundation.css" />
+    <link rel="stylesheet" href="Foundation-CSS/Foundation-Sites-CSS/css/app.css"/>
+    <title>Chess Master</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
+        integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- header section starts-->
+    <header class="header text-center">
+        <h1>
+            <a href="/" id="CHESS-MASTER">OPENING YOUR M&#9817;ND</a>
+      </h1>
+        <!-- search bar and submit button section starts-->
+        <form class="grid-x" id="search-bar">
+            <input class="search-button cell small-8" type="text" placeholder="Search" id="search-input"/>
+            <button class="search-button button cell small-3" type="submit" id="search-button">Submit</button>
+        </form>
+        <!-- search bar and submit button section ends-->
+    </header>
+    <!-- header section ends-->
+    <section class="no_header_or_footer">
+
+        <!-- Profile pictures section Starts-->
+        <section id="profile-scroll" class="profile-scroll">
+            <div class="profile-pictures">
+                <div id="top-players">
+                    <img src="./assets/placeholder-images/magnus.jpeg" alt="pic" id="magnuscarlsen">
+                    <img src="./assets/placeholder-images/hikaru.jpeg" alt="pic" id="hikaru">
+                    <img src="./assets/placeholder-images/daniel.jpeg" alt="pic" id="danielnaroditsky">
+                    <img src="./assets/placeholder-images/anish.jpeg" alt="pic" id="anishgiri">
+                    <img src="./assets/placeholder-images/levy.jpeg" alt="pic" id="gothamchess">
+                    <img src="./assets/placeholder-images/ali.png" alt="pic" id="firouzja2003">
+                    <img src="./assets/placeholder-images/Nepo.png" alt="pic" id="lachesisq">
+                    <img src="./assets/placeholder-images/wesley.jpeg" alt="pic" id="gmwso">
+                    <img src="./assets/placeholder-images/alexander.png" alt="pic" id="grischuk">
+                </div>
+            </div>
+        </section>
+        <!-- Profile pictures section ends-->
+
+       <!-- Profile pop up starts here-->
+        <section class="text-center" id="profile-info">
+            <div id="head-text"><h4>Score as many points as you can in one sitting. See if you can beat your previous high score.</h4></div>
+        </section>
+
+
+        <div class="grid-x">
+            <div class="cell small-6 text-right" id="profile-picture"></div>
+                <div class="cell small-6">
+                <div id="player-name"></div>
+                <div id="player-rating"></div>
+                </div>
+        </div>
+        <!-- Profile pop up ends-->
+
+        <!-- Chessboard section starts -->
+        <section id="chessboard">
+            <div>
+                <h1 id="opening-title"></h1>
+            </div>
+            
+            <div class="chessboard-img">
+                <article>
+                    <div class="my-board" id="myBoard"></div>
+                </article>
+            </div>
+                
+        </section>
+        <!-- Chessboard section ends -->
+        
+        
+    </section>
+
+    <!-- Hint and High Score Buttons -->
+    <section class="score-hint">
+    <button class="button high-score" id="high-score">HIGHSCORE</button>
+    <button class="button reveal-link" data-open="reveal-modal">HINT</button>
+    </section>
+    <div id="reveal-modal" class="reveal" data-reveal  role="dialog">
+        <h2 id="modalTitle">Awesome. I have it.</h2>
+        <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+    </div>
+    <div id="Reveal-Modal" class="reveal" data-reveal  role="dialog">
+        <h2 id="winner-modal">Awesome. I have it.</h2>
+        <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+    </div>
+
+    <!-- Footer starts -->       
+    <footer class="footer text-center">
+        <p> Made by Jonathan Prill, Jordan Stafford, and David Young.</p>
+    </footer>
+    <!-- Footer ends -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"
+        integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD"
+        crossorigin="anonymous"></script>
+    <script src="chess.js"></script>
+    <script src="Foundation-CSS/Foundation-Sites-CSS/js/vendor/foundation.js"></script>
+    <script src="Foundation-CSS/Foundation-Sites-CSS/js/vendor/what-input.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        $(document).foundation();
+      </script>
+</body>
+
+</html>
